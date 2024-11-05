@@ -1,0 +1,203 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto", sans-serif;
+}
+
+.container{
+    max-width: 1024px;
+    margin: 0 auto;
+}
+
+header{
+    background-color: rgb(236, 236, 45);
+    padding: 1.5vh 0;
+}
+
+header .container{
+    align-items: center;
+    justify-content: space-between;
+    display: flex;
+}
+
+header h1{
+    color: green;
+}
+
+#menu a{
+    text-decoration: none;
+    font-weight: bold;
+    color: green;
+    padding-left: 4px;
+}
+
+#informacao-loja .container{
+    display: flex;
+    padding-top: 4vh;
+}
+
+#informacao-loja img{
+    margin-right: 3vw;
+    max-width: 500px;
+}
+
+#sobre h2{
+    padding-bottom: 1vh;
+    margin-bottom: 5vh;
+    border-bottom: 3px solid #06d30d;
+}
+
+#produtos h2{
+    margin: 5vh 0;
+    padding-bottom: 2vh;
+    border-bottom: 3px solid #06d30d;
+}
+
+#produtos-individuais{
+    display: grid;
+    grid-template-columns: repeat(4,24.25%);
+    column-gap: 1%;
+}
+
+.banana img{
+    max-width: 320px;
+    max-height: 200px;
+    width: 100%;
+    height: 100%;
+}
+
+.banana h3{
+    margin: 3vh 0 2vh 0;
+    font-size: 1.3em;
+}
+
+.banana p{
+    margin-bottom: 1vh;
+}
+
+.banana button{
+    border: none;
+    border-radius: 3px;
+    width: 100%;
+    padding: 8px;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 12px;
+    background-color: green;
+    color: yellow;
+}
+
+footer{
+    padding: 16px;
+    margin-top: 3vh;
+    background-color: rgb(236, 236, 45); 
+}
+
+@media screen and (max-width: 767px){
+    
+    header h1{
+        padding-left: 2vw;
+    }
+
+    #menu a{
+        display: block;
+        padding-right: 10vw;
+    } 
+
+    #informacao-loja .container,
+    #produtos .container{
+        flex-direction: column;
+        max-width: 85%;
+    }
+
+    #sobre{
+        padding-top: 5vh;
+    }
+
+    #produtos-individuais{
+        display: block;
+    }
+
+    #produtos article{
+        padding-bottom: 4vh;
+    }
+
+    .banana img{
+        max-width: 600px;
+        max-height: 30vh;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .banana button{
+        margin: 1vh 0 2vh;
+        padding:10px;
+        font-size: 0.8em;
+    }
+}
+
+@media screen and (min-width:768px) and (max-width:1023px){
+    
+    .container{
+        width: 90%;
+    }
+
+    p{
+        font-size: 1.2em;
+    }
+
+    header h1{
+        font-size: 2.5em;
+    }
+
+    #menu a{
+        font-size: 1.3em;
+    }
+
+    #informacao-loja .container{
+        flex-direction: column;
+    }
+
+    #informacao-loja img{
+        max-width: 1023px;
+        width: 100%;
+        object-fit:contain;
+    }
+
+    #produtos-individuais{
+        grid-template-columns: repeat(2, 49%);
+    }
+
+    #sobre{
+        padding-top: 5vh;
+    }
+
+    .banana{
+        margin-bottom: 2vh;
+    }
+
+    .banana img{
+        max-width: 600px;
+        max-height: 200px;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .banana h3{
+        margin: 1vh 0 2vh 0;
+        font-size: 1.3em;
+    }
+
+    .banana button{
+        margin-top: 1vh;
+        padding:10px;
+        font-size: 0.8em;
+    }
+
+    footer{
+        margin-top: 1vh;
+    }
+}
